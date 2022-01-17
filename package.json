@@ -1,0 +1,17 @@
+{
+  "name": "playwright_practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "L_a",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.17.2"
+  },
+  "dependencies": {
+    "init-playwright": "^0.25.3"
+  }
+}
