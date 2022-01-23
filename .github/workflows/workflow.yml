@@ -18,12 +18,12 @@ jobs:
         playwright: [1.0.0, 1.1.0, 1.2.0, 1.12.0, next]
         headless: [true, false]
         exclude:
-          - os: ubuntu-20.04
-            playwright: 1.0.0
-          - os: ubuntu-20.04
-            playwright: 1.1.0
-          - os: ubuntu-20.04
-            playwright: 1.2.0
+          # - os: ubuntu-20.04
+          #   playwright: 1.0.0
+          # - os: ubuntu-20.04
+          #   playwright: 1.1.0
+          # - os: ubuntu-20.04
+          #   playwright: 1.2.0
           - os: ubuntu-20.04
             playwright: latest
 
@@ -33,20 +33,20 @@ jobs:
     - uses: actions/setup-node@v1
     - uses: ./
     - name: Install dependencies
-      run: cd sample && npm install playwright@${{ matrix.playwright }}
+      run: cd test && npm install playwright@${{ matrix.playwright }}
       # Headless running is the same across OSes
     - name: Run Playwright (headless)
       if: ${{ matrix.headless == true }}
       run: cd test && node index.js
 
-      # Headful is different in every OS
-    - name: Run Playwright (headful linux)
-      if: ${{ matrix.headless == false && startsWith(matrix.os, 'ubuntu') }}
-      run: cd sample && HEADFUL=true xvfb-run --auto-servernum -- node index.js
-    - name: Run Playwright (headful windows)
-      if: ${{ matrix.headless == false && startsWith(matrix.os, 'windows') }}
-      run: cd sample && HEADFUL=true node index.js
-      shell: bash
-    - name: Run Playwright (headful mac)
-      if: ${{ matrix.headless == false && startsWith(matrix.os, 'mac') }}
-      run: cd sample && HEADFUL=true node index.js
+    #   # Headful is different in every OS
+    # - name: Run Playwright (headful linux)
+    #   if: ${{ matrix.headless == false && startsWith(matrix.os, 'ubuntu') }}
+    #   run: cd sample && HEADFUL=true xvfb-run --auto-servernum -- node index.js
+    # - name: Run Playwright (headful windows)
+    #   if: ${{ matrix.headless == false && startsWith(matrix.os, 'windows') }}
+    #   run: cd sample && HEADFUL=true node index.js
+    #   shell: bash
+    # - name: Run Playwright (headful mac)
+    #   if: ${{ matrix.headless == false && startsWith(matrix.os, 'mac') }}
+    #   run: cd sample && HEADFUL=true node index.js
