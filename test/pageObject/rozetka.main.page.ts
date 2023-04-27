@@ -16,8 +16,8 @@ export class MainRozetkaPage {
     }
 
     async navigateToRozetkaAndVerifyUrl(text:string) {
-        await this.page.goto('https://rozetka.com.ua/');
-        await expect(this.page).toHaveURL('https://rozetka.com.ua/');
+        await this.page.goto('https://rozetka.com.ua/ua/');
+        await expect(this.page).toHaveURL('https://rozetka.com.ua/ua/');
         await expect(this.page).toHaveTitle(text);
     }
 

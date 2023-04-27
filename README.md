@@ -2,8 +2,11 @@
 install supported browsers
 ## npx playwright install
 
-# for run  
+# to run tests
 npx playwright test
 
-# for run and open the browser 
+# to run and open the browser 
 npx playwright test --headed
+
+# to run tests with opened UI
+npx playwright test --ui
