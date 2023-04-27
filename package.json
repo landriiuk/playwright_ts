@@ -9,9 +9,6 @@
   "author": "L_a",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.17.2"
-  },
-  "dependencies": {
-    "init-playwright": "^0.25.3"
+    "@playwright/test": "^1.33.0"
   }
 }
