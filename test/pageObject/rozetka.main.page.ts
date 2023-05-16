@@ -11,8 +11,6 @@ export class MainRozetkaPage {
         this.getCartButton = page.locator('[href="#icon-header-basket"]');
         this.getCartTitle = page.locator('.modal__heading');
         this.getTextIntoCart = page.locator('.cart-dummy__heading');
-        // this.coreConceptsLink = page.locator('text=Core concepts');
-        // this.bodyBrowsers = page.locator('p:nth-child(3) > a');
     }
 
     async navigateToRozetkaAndVerifyUrl(text:string) {
@@ -24,6 +22,7 @@ export class MainRozetkaPage {
     async navigateToCart() {
         await this.getCartButton.click();
     }
+    
     async verifyIfCartIsEmpty(titleCart: string, text: string) {
         await expect(this.getCartTitle).toHaveText(titleCart);
         await expect(this.getTextIntoCart).toHaveText(text);
