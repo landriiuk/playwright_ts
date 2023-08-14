@@ -28,7 +28,3 @@ export class MainRozetkaPage {
         await expect(this.getTextIntoCart).toHaveText(text);
     }
 }
-
-// function click(getBasket: Locator) {
-//     throw new Error('Function not implemented.');
-// }

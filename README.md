@@ -2,11 +2,18 @@
 install supported browsers
 ## npx playwright install
 
-# to run tests
-npx playwright test
+# to run tests without UI
+
+`npm run test:headless`
 
 # to run and open the browser 
-npx playwright test --headed
 
-# to run tests with opened UI
-npx playwright test --ui
+`npm run test:headed`
+
+# to run tests in debug mode
+
+`npm run test:debug`
+
+# to run tests with title 
+npx playwright test -g "your id title"
+

@@ -1,25 +1,26 @@
 import { test } from '@playwright/test';
-import { MainRozetkaPage } from '../pageObject/rozetka.main.page';
-import { NavigationMainPage } from '../pageObject/navigation.main.page';
-
-let rozetkaTitle: string = 'Інтернет-магазин ROZETKA™: офіційний сайт найпопулярнішого онлайн-гіпермаркету в Україні';
+import { MainRozetkaPage } from '../../pageObject/rozetka.main.page';
+import { NavigationMainPage } from '../../pageObject/navigation.main.page';
+import { ukrainianLocalization } from '../../testData/variables';
 
 test.describe('Explore rozetka using playwright', () => {
+    let rozetkaMainPage: MainRozetkaPage, navigationPage: NavigationMainPage;
 
     test.beforeEach(async function ({ page }) {
-        let rozetkaMainPage = new MainRozetkaPage(page);
-        await rozetkaMainPage.navigateToRozetkaAndVerifyUrl(rozetkaTitle);
+        rozetkaMainPage = new MainRozetkaPage(page);
+        navigationPage = new NavigationMainPage(page);
+
+        await rozetkaMainPage.navigateToRozetkaAndVerifyUrl(ukrainianLocalization.rozetkaTitle);
     });
 
     test('Verify if cart is empty', async ({ page }) => {
         let rozetkaMainPage = new MainRozetkaPage(page);
         await rozetkaMainPage.navigateToCart();
-        await rozetkaMainPage.verifyIfCartIsEmpty('Кошик', 'Кошик порожній');
+        await rozetkaMainPage.verifyIfCartIsEmpty(ukrainianLocalization.basket, ukrainianLocalization.emptyBasket);
     });
 
-    test.only('Add product to a basket', async ({ page }) => {
-        let navigationPage = new NavigationMainPage(page);
-        navigationPage.navigateToCategoryByName('Ноутбуки та комп’ютери');
-        navigationPage.selectSubCategory('Ноутбуки')
+    test('Add product to a basket', async () => {
+        navigationPage.navigateToCategoryByName(ukrainianLocalization.laptopsAndComputers);
+        navigationPage.navigateToCategoryByName(ukrainianLocalization.laptops);
     });
 });
