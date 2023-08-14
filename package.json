@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test:headed": "npx playwright test --headed",
-    "test:headless":"npx playwright test",
+    "test:headless": "npx playwright test",
     "test:debug": "npx playwright test --ui"
   },
   "author": "Liubov Andriiuk",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.33.0"
+    "@playwright/test": "^1.37.0"
   }
 }
