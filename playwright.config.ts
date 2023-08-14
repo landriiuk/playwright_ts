@@ -11,10 +11,15 @@ const config: PlaywrightTestConfig = {
     },
     projects: [
         {
-            name: 'chromium',
-            use: { ...devices['Desktop Chrome'] },
+          name: 'chrome web',
+          use: {
+              browserName: 'chromium',
+              launchOptions: {
+                  args: ['--ignore-certificate-errors']
+              }
+          }
         },
-    ],
+      ],
 
 };
 export default config;
