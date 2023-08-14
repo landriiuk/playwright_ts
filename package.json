@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:headed": "npx playwright test --headed",
+    "test:headless":"npx playwright test",
+    "test:debug": "npx playwright test --ui"
   },
-  "author": "L_a",
+  "author": "Liubov Andriiuk",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.33.0"
