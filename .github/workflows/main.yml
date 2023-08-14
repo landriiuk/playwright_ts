@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run your tests
-        run: npx playwright test
+        run: npm run test:headless
       - uses: actions/upload-artifact@v3
         if: always()
         with:

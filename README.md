@@ -1,6 +1,5 @@
-## npm i -D @playwright/test
-install supported browsers
-## npx playwright install
+# to install dependencies
+`npx playwright install`
 
 # to run tests without UI
 
@@ -15,5 +14,5 @@ install supported browsers
 `npm run test:debug`
 
 # to run tests with title 
-npx playwright test -g "your id title"
+`npx playwright test -g "your id title"`
 
