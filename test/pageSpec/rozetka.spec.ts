@@ -3,7 +3,7 @@ import { ukrainianLocalization } from '../../testData/variables';
 
 test.describe('Explore rozetka using playwright', () => {
 
-    test.beforeEach(async function ({ rozetkaMainPage }) {
+    test.beforeEach(async ({ rozetkaMainPage }) => {
         await rozetkaMainPage.navigateToRozetkaAndVerifyUrl(ukrainianLocalization.rozetkaTitle);
     });
 
