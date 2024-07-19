@@ -1,18 +1,31 @@
 # to install dependencies
-`npx playwright install`
+To get started, run the following commands in your terminal:
 
-# to run tests without UI
+```bash
+npm install
+npx playwright install
+```
 
-`npm run test:headless`
+To run tests without UI, use the command:
 
-# to run and open the browser 
+```bash
+npm run test:headless
+```
 
-`npm run test:headed`
+To run tests and open the browser, use the command:
 
-# to run tests in debug mode
+```bash
+npm run test:headed
+```
 
-`npm run test:debug`
+To run tests in debug mode, use the command:
 
-# to run tests with title 
-`npx playwright test -g "your id title"`
+```bash
+npm run test:debug
+```
 
+To run tests with a specific title, use the command:
+
+```bash
+npx playwright test -g "your id title"
+```
