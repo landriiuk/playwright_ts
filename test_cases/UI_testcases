@@ -2,19 +2,29 @@
 
 ### Test Case 1: Verify Home Page Load
 - **Test Case ID**: UI_TC_001
-- **Objective**: Verify the home page loads without errors and displays all key elements.
-- **Preconditions**: None
-- **Test Steps**:
-  1. Open a web browser.
-  2. Navigate to [Automation Test Store](https://automationteststore.com/).
-  3. Wait for the page to fully load.
-  4. Verify that the following elements are present:
-     - The site logo is visible.
-     - Navigation menu items (e.g., Home, Products, About Us).
-     - Featured product sections.
-     - Promotional banners.
-  5. Check the footer for links (e.g., Contact Us, Terms of Service).
-- **Expected Result**: The home page loads successfully, and all specified elements are present and correctly displayed.
+- **Objective**: Ensure the home page loads successfully without errors and that all critical UI elements are visible and functional.
+- **Preconditions**: 
+  - The testing environment must be set up, and the web application must be accessible.
+  - Ensure Google Chrome is updated to the latest version for compatibility.
+
+## Test Steps:
+1. **Open Google Chrome**.
+2. **Navigate to** [Automation Test Store](https://automationteststore.com/).
+3. **Wait for the page to fully load**.
+4. **Verify the presence of the following key elements**:
+   - **Site Logo**: Confirm that the logo is visible and correctly displayed.
+   - **Main Navigation Menu**:
+     - Check for items: Login or Register, Specials, Account, Cart, Checkout.
+     - Verify that these items are clickable and lead to the correct pages.
+   - **Secondary Navigation Bar**: Ensure visibility and correctness of the following items:
+     - Home, Apparel & Accessories, Makeup, Skincare, Fragrance, Men, Hair Care, Books.
+5. **Footer Section**:
+   - Verify the presence of footer items: About Us, Contact Us, Testimonials, Newsletter Signup.
+   - Ensure that links in the footer are functional and direct users to the appropriate pages (About Us, Privacy Policy, Return Policy, Shipping Information, Contact Us, Site Map, Login).
+
+## Expected Result: 
+- The home page should load without errors within the acceptable time frame.
+- All specified elements (logo, navigation menus, footer links) should be present, displayed correctly, and function as intended.
 
 ### Test Case 2: User Registration
 - **Test Case ID**: UI_TC_002
