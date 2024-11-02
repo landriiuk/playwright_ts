@@ -4,28 +4,28 @@ test.describe("Verify main page", async () => {
   test("UI_TC_001 Verify the home page loads without errors and displays all key elements.", async ({
     homePage,
   }) => {
-    test.step("Navigate to main page", async () => {
+ await   test.step("Navigate to main page", async () => {
       await homePage.navigateToPage();
     });
-    test.step("Navigate to", async () => {
+    await   test.step("Navigate to", async () => {
       await homePage.verifyUrl();
     });
 
-    test.step("Verify the presence of the following key elements", async () => {
+    await    test.step("Verify the presence of the following key elements", async () => {
       test.step("Site Logo: Confirm that the logo is visible", async () => {
         await homePage.verifyLogoIsVisible();
       });
 
-      test.step("Main Navigation Menu. Check for items: Login or Register, Specials, Account, Cart, Checkout", async () => {
+      await    test.step("Main Navigation Menu. Check for items: Login or Register, Specials, Account, Cart, Checkout", async () => {
 
       });
     });
 
-    test.step("Navigate to", async () => {});
+    await  test.step("Navigate to", async () => {});
 
-    test.step("Navigate to", async () => {});
+    await   test.step("Navigate to", async () => {});
 
-    test.step("Navigate to", async () => {});
+    await   test.step("Navigate to", async () => {});
   });
 });
 // 1. **Open Google Chrome**.
