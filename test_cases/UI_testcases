@@ -2,7 +2,7 @@
 
 ### Test Case 1: Verify Home Page Load
 - **Test Case ID**: UI_TC_001
-- **Objective**: Ensure the home page loads without errors and displays all key elements.
+- **Objective**: Verify the home page loads without errors and displays all key elements.
 - **Preconditions**: None
 - **Test Steps**:
   1. Open a web browser.
