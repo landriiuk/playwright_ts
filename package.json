@@ -11,6 +11,6 @@
   "author": "Liubov Andriiuk",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.38.1"
+    "@playwright/test": "^1.48.2"
   }
 }
