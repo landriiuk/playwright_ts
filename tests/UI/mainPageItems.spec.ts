@@ -5,10 +5,8 @@ test.describe("Verify main page", async () => {
   test("UI_TC_001 Verify the home page loads without errors and displays all key elements.", async ({
     homePage,
   }) => {
-    await test.step("Navigate to main page", async () => {
+    await test.step("Navigate to main page and verify if navigated", async () => {
       await homePage.navigateToPage();
-    });
-    await test.step("Navigate to", async () => {
       await homePage.verifyUrl();
     });
 
