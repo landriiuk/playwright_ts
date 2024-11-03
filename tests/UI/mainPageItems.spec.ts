@@ -1,43 +1,47 @@
 import { test } from "../../fixtures/baseFixture";
+import { footerBarItems, footerLinks } from "../../testData/mainPageVariables";
 
 test.describe("Verify main page", async () => {
   test("UI_TC_001 Verify the home page loads without errors and displays all key elements.", async ({
     homePage,
   }) => {
- await   test.step("Navigate to main page", async () => {
+    await test.step("Navigate to main page", async () => {
       await homePage.navigateToPage();
     });
-    await   test.step("Navigate to", async () => {
+    await test.step("Navigate to", async () => {
       await homePage.verifyUrl();
     });
 
-    await    test.step("Verify the presence of the following key elements", async () => {
+    await test.step("Verify the presence of the following key elements", async () => {
       test.step("Site Logo: Confirm that the logo is visible", async () => {
         await homePage.verifyLogoIsVisible();
       });
 
-      await    test.step("Main Navigation Menu. Check for items: Login or Register, Specials, Account, Cart, Checkout", async () => {
-
+      await test.step("Main Navigation Menu. Check for items: Login or Register, Specials, Account, Cart, Checkout", async () => {
+        await homePage.verifyMenuNavigationItems(
+          homePage.getNavBarItemsContainer
+        );
       });
     });
 
-    await  test.step("Navigate to", async () => {});
+    await test.step("Secondary Navigation Bar: Check correctness of the items", async () => {
+      await homePage.verifyItemsVisibility(homePage.getByLinkNameCommon);
+    });
 
-    await   test.step("Navigate to", async () => {});
+    await test.step("Footer Section", async () => {
+      await test.step("Verify the presence of footer items: About Us, Contact Us, Testimonials, Newsletter Signup", async () => {
+        await homePage.verifyItemsVisibility(
+          homePage.footerContainer,
+          footerBarItems
+        );
+      });
 
-    await   test.step("Navigate to", async () => {});
+      await test.step("Ensure that links in the footer are functional and direct users to the appropriate pages", async () => {
+        await homePage.verifyMenuNavigationItems(
+          homePage.infoFooterLinks,
+          footerLinks
+        );
+      });
+    });
   });
 });
-// 1. **Open Google Chrome**.
-// 2. **Navigate to** [Automation Test Store](https://automationteststore.com/).
-// 3. **Wait for the page to fully load**.
-// 4. **Verify the presence of the following key elements**:
-//    - **Site Logo**: Confirm that the logo is visible and correctly displayed.
-//    - **Main Navigation Menu**:
-//      - Check for customer top menu items: Login or Register, Specials, Account, Cart, Checkout.
-//      - Verify that these items are clickable and lead to the correct pages.
-//    - **Secondary Navigation Bar**: Ensure visibility and correctness of the following items:
-//      - Home, Apparel & Accessories, Makeup, Skincare, Fragrance, Men, Hair Care, Books.
-// 5. **Footer Section**:
-//    - Verify the presence of footer items: About Us, Contact Us, Testimonials, Newsletter Signup.
-//    - Ensure that links in the footer are functional and direct users to the appropriate pages (About Us, Privacy Policy, Return Policy, Shipping Information, Contact Us, Site Map, Login).
