@@ -6,7 +6,6 @@
 - **Preconditions**: 
   - The testing environment must be set up, and the web application must be accessible.
   - Ensure Google Chrome is updated to the latest version for compatibility.
-
 ## Test Steps:
 1. **Open Google Chrome**.
 2. **Navigate to** [Automation Test Store](https://automationteststore.com/).

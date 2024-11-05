@@ -7,7 +7,7 @@ export class HomePage {
   readonly getHomeItemMenuBar: Locator;
   readonly getNavBarItemsContainer: Locator;
   readonly getNavigationCrumbContainer: Locator;
-  readonly getByLinkNameCommon: (elementName: string) => Locator;
+  readonly getByLinkNameCommon: (elementName: string) => Locator; //should be in common
 
   readonly footerContainer: Locator;
   readonly infoFooterLinks: Locator;
@@ -41,8 +41,6 @@ export class HomePage {
     items: any = navBarItems
   ) {
     for (const item in items) {
-      // await (typeof getLocator === "function"
-      //   ? locator.nth(0).click()
       await getLocator.getByText(item, { exact: true }).nth(0).click();
 
       await expect(this.getNavigationCrumbContainer).toContainText(items[item]);

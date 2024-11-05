@@ -1,7 +1,7 @@
 import { test } from "../../fixtures/baseFixture";
 import { footerBarItems, footerLinks } from "../../testData/mainPageVariables";
 
-test.describe("Verify main page", async () => {
+test.describe("Home page tests", async () => {
   test("UI_TC_001 Verify the home page loads without errors and displays all key elements.", async ({
     homePage,
   }) => {
