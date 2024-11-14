@@ -13,7 +13,7 @@ export class MainRozetkaPage {
     this.getTextIntoCart = page.locator('.cart-dummy__heading');
   }
 
-  async navigateToRozetkaAndVerifyUrl(text:string) {
+  async navigateToRozetkaAndVerifyUrl(text: string) {
     await this.page.goto('https://rozetka.com.ua/ua/');
     await expect(this.page).toHaveURL('https://rozetka.com.ua/ua/');
     await expect(this.page).toHaveTitle(text);
@@ -22,7 +22,7 @@ export class MainRozetkaPage {
   async navigateToCart() {
     await this.getCartButton.click();
   }
-    
+
   async verifyIfCartIsEmpty(titleCart: string, text: string) {
     await expect(this.getCartTitle).toHaveText(titleCart);
     await expect(this.getTextIntoCart).toHaveText(text);

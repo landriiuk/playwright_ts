@@ -3,7 +3,9 @@ import { MainRozetkaPage } from './rozetka.main.page';
 
 export class NavigationMainPage extends MainRozetkaPage {
   readonly page: Page;
+
   readonly getSubCategory: Locator;
+
   readonly getProductsContainer: Locator;
 
   constructor(page: Page) {
@@ -22,7 +24,5 @@ export class NavigationMainPage extends MainRozetkaPage {
     await this.page.getByText(subcategory).click();
   }
 
-  async addProductInTheBasket() {
-
-  }
+  async addProductInTheBasket() {}
 }

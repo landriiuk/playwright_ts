@@ -3,6 +3,7 @@ import tseslint from 'typescript-eslint';
 import { includeIgnoreFile } from '@eslint/compat';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import eslintConfigPrettier from 'eslint-config-prettier';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -12,11 +13,11 @@ export default tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   includeIgnoreFile(gitignorePath),
-
+  eslintConfigPrettier,
   {
     rules: {
-      'quotes': ['error', 'single', { avoidEscape: true }],
-      'semi': ['error', 'always'],
+      quotes: ['error', 'single', { avoidEscape: true }],
+      semi: ['error', 'always'],
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
@@ -24,12 +25,12 @@ export default tseslint.config(
           varsIgnorePattern: '^I',
         },
       ],
-      'curly': ['error', 'all'],
+      curly: ['error', 'all'],
       'no-console': ['warn', { allow: ['warn', 'error'] }],
-      'indent': ['error', 2],
+      indent: ['error', 2],
       'no-duplicate-imports': 'error',
       'object-curly-spacing': ['error', 'always'],
-      'camelcase': ['error', { properties: 'always' }],
+      camelcase: ['error', { properties: 'always' }],
       '@typescript-eslint/no-explicit-any': 'off',
     },
   }

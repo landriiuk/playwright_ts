@@ -3,6 +3,7 @@ import { navBarItems, subNavBarItems } from '../testData/mainPageVariables';
 
 export class HomePage {
   readonly page: Page;
+
   readonly getLogo: Locator;
   readonly getHomeItemMenuBar: Locator;
   readonly getNavBarItemsContainer: Locator;

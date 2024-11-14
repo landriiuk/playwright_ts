@@ -10,15 +10,15 @@ export default defineConfig({
     baseURL: process.env.BASE_URL,
     trace: 'on',
     screenshot: 'only-on-failure',
-    launchOptions:{
+    launchOptions: {
       args: ['--ignore-certificate-errors'],
     },
-    navigationTimeout: 30000 //by default 0
+    navigationTimeout: 30000, //by default 0
   },
   timeout: 30000, //by default
 
-  expect:{
-    timeout:20000
+  expect: {
+    timeout: 20000,
   },
   projects: [
     {
