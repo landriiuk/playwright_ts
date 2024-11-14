@@ -1,5 +1,5 @@
-import { Locator, Page } from "@playwright/test";
-import { HomePage } from "./home.page";
+import { Locator, Page, expect } from '@playwright/test';
+import { HomePage } from './home.page';
 
 export class LoginPage extends HomePage {
   private readonly getLoginButton: Locator;
@@ -30,11 +30,11 @@ export class LoginPage extends HomePage {
   private readonly accountCreatedMessage: Locator;
   constructor(page: Page) {
     super(page);
-    this.getLoginButton = this.getByLinkNameCommon("Login or register");
-    this.continueButton = page.getByRole("button", { name: " Continue" });
+    this.getLoginButton = this.getByLinkNameCommon('Login or register');
+    this.continueButton = page.getByRole('button', { name: ' Continue' });
 
-    this.formBase = "#AccountFrm_";
-    this.newCustomerFormPage = page.locator(".newcustomer .heading2");
+    this.formBase = '#AccountFrm_';
+    this.newCustomerFormPage = page.locator('.newcustomer .heading2');
     this.firstName = page.locator(`${this.formBase}firstname`);
     this.lastName = page.locator(`${this.formBase}lastname`);
     this.email = page.locator(`${this.formBase}email`);
@@ -50,15 +50,15 @@ export class LoginPage extends HomePage {
     this.loginName = page.locator(`${this.formBase}loginname`);
     this.password = page.locator(`${this.formBase}password`);
     this.confirmPassword = page.locator(`${this.formBase}confirm`);
-    this.termsCheckbox = page.getByLabel("I have read and agree to the");
-    this.accountCreatedMessage = page.locator(".maintext");
+    this.termsCheckbox = page.getByLabel('I have read and agree to the');
+    this.accountCreatedMessage = page.locator('.maintext');
   }
   async clickLoginOrRegister() {
     await this.getLoginButton.click();
   }
 
   async verifyAccountLoginVisible() {
-    await expect(this.newCustomerFormPage).toHaveText("I am a new customer.");
+    await expect(this.newCustomerFormPage).toHaveText('I am a new customer.');
   }
 
   async clickContinueButton() {
@@ -97,8 +97,7 @@ export class LoginPage extends HomePage {
 
   async verifyAccountCreated() {
     await expect(this.accountCreatedMessage).toHaveText(
-      "Your Account Has Been Created!"
+      'Your Account Has Been Created!'
     );
   }
 }
-import { expect } from "@playwright/test";

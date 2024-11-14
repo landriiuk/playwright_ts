@@ -1,6 +1,6 @@
-import { test as base } from "@playwright/test";
-import { HomePage } from "../pageObject/home.page";
-import { LoginPage } from "../pageObject/login.page";
+import { test as base } from '@playwright/test';
+import { HomePage } from '../pageObject/home.page';
+import { LoginPage } from '../pageObject/login.page';
 
 type MyFixtures = {
   homePage: HomePage;
@@ -15,4 +15,4 @@ export const test = base.extend<MyFixtures>({
     await use(new LoginPage(page));
   },
 });
-export { expect } from "@playwright/test";
+export { expect } from '@playwright/test';

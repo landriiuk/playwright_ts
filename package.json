@@ -11,9 +11,15 @@
   "author": "Liubov Andriiuk",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.14.0",
     "@faker-js/faker": "^9.2.0",
     "@playwright/test": "^1.48.2",
+    "@types/eslint__js": "^8.42.3",
     "@types/node": "^22.8.6",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "eslint": "^9.14.0",
+    "eslint-plugin-playwright": "^2.0.1",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.14.0"
   }
 }
