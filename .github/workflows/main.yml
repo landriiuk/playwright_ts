@@ -1,10 +1,10 @@
 name: Playwright Tests
 on:
-  push:
+  pull_request:
     branches:
-      - 'qa/automationstore_CI_config'
+      - 'master' 
   schedule:
-    - cron: '0 16 * * 1-5'
+     - cron: '0 16 * * 1-5' 
   workflow_dispatch:
 jobs:
   playwright:
@@ -25,7 +25,7 @@ jobs:
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
         run: npm run test:headless
-        
+
       - uses: actions/upload-artifact@v4
         if: always()
         with:
