@@ -79,6 +79,7 @@ export class LoginPage extends HomePage {
       await this.address2.fill(details.address2);
     }
     await this.country.selectOption(details.country);
+    await this.page.waitForTimeout(500); //this timeout is needed to prevent failing due to slow backend
     await this.city.fill(details.city);
     await this.postcode.fill(details.postcode);
     await this.state.selectOption(details.state);

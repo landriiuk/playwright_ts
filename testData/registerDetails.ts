@@ -13,7 +13,7 @@ const addressDetails: IAddressDetails = {
   address1: faker.location.streetAddress(),
   address2: faker.location.streetAddress({ useFullAddress: true }),
   city: faker.location.city(),
-  state: '3513', //
+  state: '3514', //
   country: '222', //UK
   postcode: faker.location.zipCode(),
 };
