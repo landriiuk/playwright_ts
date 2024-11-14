@@ -8,7 +8,7 @@ export default defineConfig({
   testDir: 'tests',
   use: {
     baseURL: process.env.BASE_URL,
-    trace: 'on',
+    trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     launchOptions: {
       args: ['--ignore-certificate-errors'],

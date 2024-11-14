@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:headed": "npx playwright test --headed",
-    "test:headless": "npx playwright test",
-    "test:debug": "npx playwright test --ui"
+    "test:headed": "npx playwright test --headed --project=chrome_web",
+    "test:headless": "npx playwright test --project=chrome_web",
+    "test:debug": "npx playwright test --ui --project=chrome_web"
   },
   "lint-staged": {
     "*.ts": [
