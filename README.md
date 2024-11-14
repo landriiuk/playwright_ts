@@ -1,4 +1,5 @@
 # to install dependencies
+
 To get started, run the following commands in your terminal:
 
 ```bash
@@ -28,4 +29,16 @@ To run tests with a specific title, use the command:
 
 ```bash
 npx playwright test -g "your id title"
+```
+
+To use eslint:
+
+```bash
+npx eslint .
+```
+
+To fix eslint issues:
+
+```bash
+npx eslint --fix
 ```

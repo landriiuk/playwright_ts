@@ -1,0 +1,94 @@
+## 1. UI Testing Cases
+
+### Test Case 1: Verify Home Page Load
+- **Test Case ID**: UI_TC_001
+- **Objective**: Ensure the home page loads successfully without errors and that all critical UI elements are visible and functional.
+- **Preconditions**: 
+  - The testing environment must be set up, and the web application must be accessible.
+  - Ensure Google Chrome is updated to the latest version for compatibility.
+## Test Steps:
+1. **Open Google Chrome**.
+2. **Navigate to** [Automation Test Store](https://automationteststore.com/).
+3. **Wait for the page to fully load**.
+4. **Verify the presence of the following key elements**:
+   - **Site Logo**: Confirm that the logo is visible and correctly displayed.
+   - **Main Navigation Menu**:
+     - Check for items: Login or Register, Specials, Account, Cart, Checkout.
+     - Verify that these items are clickable and lead to the correct pages.
+   - **Secondary Navigation Bar**: Ensure visibility and correctness of the following items:
+     - Home, Apparel & Accessories, Makeup, Skincare, Fragrance, Men, Hair Care, Books.
+5. **Footer Section**:
+   - Verify the presence of footer items: About Us, Contact Us, Testimonials, Newsletter Signup.
+   - Ensure that links in the footer are functional and direct users to the appropriate pages (About Us, Privacy Policy, Return Policy, Shipping Information, Contact Us, Site Map, Login).
+
+## Expected Result: 
+- The home page should load without errors within the acceptable time frame.
+- All specified elements (logo, navigation menus, footer links) should be present, displayed correctly, and function as intended.
+
+### Test Case 2: User Registration
+- **Test Case ID**: UI_TC_002
+- **Objective**: Verify that a user can register successfully with valid credentials.
+- **Preconditions**: User must not already exist in the system.
+- **Test Steps**:
+  1. Click on the "Login" link on the home page.
+  2. Select the "Create an account" option.
+  3. Fill in the required fields:
+     - First Name
+     - Last Name
+     - Email Address
+     - Password
+     - Confirm Password
+  4. Agree to the terms and conditions by checking the checkbox.
+  5. Click the "Continue" button to submit the registration.
+  6. Verify that a confirmation message appears.
+  7. Log out of the account.
+- **Expected Result**: The user should receive a confirmation message indicating successful registration and should be able to log out successfully.
+
+### Test Case 3: Product Search Functionality
+- **Test Case ID**: UI_TC_003
+- **Objective**: Ensure that searching for products returns relevant results.
+- **Preconditions**: The home page is loaded.
+- **Test Steps**:
+  1. Locate the search bar at the top of the page.
+  2. Enter a known product name (e.g., "shampoo").
+  3. Click on the search icon/button.
+  4. Wait for the results page to load.
+  5. Verify that the results list displays products related to the search term.
+  6. Check that each product includes:
+     - Product name
+     - Price
+     - Image
+  7. Click on one of the search results.
+  8. Verify that the product detail page loads correctly.
+- **Expected Result**: The search results should include products matching the query, and the product detail page should display the correct product information.
+
+### Test Case 4: Add to Cart
+- **Test Case ID**: UI_TC_004
+- **Objective**: Validate that products can be added to the shopping cart.
+- **Preconditions**: At least one product must be available.
+- **Test Steps**:
+  1. Navigate to the "Products" section from the home page.
+  2. Click on a product category (e.g., "Skin Care").
+  3. Select a product from the displayed list.
+  4. On the product detail page, choose the quantity (e.g., 1).
+  5. Click the "Add to Cart" button.
+  6. Wait for the cart update confirmation message.
+  7. Click on the cart icon.
+  8. Verify that the product is listed in the cart with the correct quantity and price.
+- **Expected Result**: The product should be successfully added to the cart, and the cart should reflect the correct item and total price.
+
+### Test Case 5: Checkout Process
+- **Test Case ID**: UI_TC_005
+- **Objective**: Confirm that users can complete the checkout process.
+- **Preconditions**: The user is logged in, and products are in the cart.
+- **Test Steps**:
+  1. Click on the shopping cart icon.
+  2. Verify that the cart displays the correct products.
+  3. Click the "Proceed to Checkout" button.
+  4. Fill in the shipping details (address, city, state, postal code).
+  5. Select a payment method (e.g., Credit Card).
+  6. Enter payment details (card number, expiration date, CVV).
+  7. Review the order summary.
+  8. Click the "Confirm Order" button.
+  9. Wait for the order confirmation page to load.
+- **Expected Result**: An order confirmation page should be displayed, showing order details and a confirmation message.
