@@ -11,6 +11,7 @@
   "author": "Liubov Andriiuk",
   "license": "ISC",
   "devDependencies": {
+    "@faker-js/faker": "^9.2.0",
     "@playwright/test": "^1.48.2",
     "@types/node": "^22.8.6",
     "dotenv": "^16.4.5"
