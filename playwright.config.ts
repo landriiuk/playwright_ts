@@ -8,14 +8,14 @@ export default defineConfig({
   testDir: "tests",
   use: {
     baseURL: process.env.BASE_URL,
-    trace: "retain-on-failure",
+    trace: "on",
     screenshot: "only-on-failure",
     launchOptions:{
         args: ["--ignore-certificate-errors"],
     },
-    navigationTimeout: 30000//by default 0
+    navigationTimeout: 30000 //by default 0
   },
-  timeout: 30000,//by default
+  timeout: 30000, //by default
 
   expect:{
     timeout:20000
