@@ -92,3 +92,14 @@
   8. Click the "Confirm Order" button.
   9. Wait for the order confirmation page to load.
 - **Expected Result**: An order confirmation page should be displayed, showing order details and a confirmation message.
+
+### Test Case 6: Verify user can login successfully
+- **Test Case ID**: UI_TC_006
+- **Objective**: Verify that a user can login successfully with valid credentials.
+- **Preconditions**: User must already exist in the system.
+- **Test Steps**:
+  1. Click on the "Login" link on the home page.
+  2. Enter the user's email and password.
+  3. Click the "Login" button.
+  4. Verify that the user is logged in successfully.
+- **Expected Result**: The user should be able to login successfully and should be able to see the home page.
