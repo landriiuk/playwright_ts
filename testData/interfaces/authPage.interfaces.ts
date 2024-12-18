@@ -1,4 +1,4 @@
-interface IPersonalDetailsRegister {
+export interface IPersonalDetailsRegister {
   firstName: string;
   lastName: string;
   email: string;
@@ -6,18 +6,23 @@ interface IPersonalDetailsRegister {
   fax: string;
 }
 
-interface IAddressDetails {
+export interface IAddressDetails {
   company: string;
   address1: string;
   address2?: string;
-  city: string;
-  state: string;
   country: string;
+  city: string;
   postcode: string;
+  state: string;
 }
 
-interface ILoginDetails {
+export interface IRegisterDetails {
   loginName: string;
   password: string;
   confirmPassword: string;
+}
+
+export interface ILoginDetails {
+  loginName: string;
+  password: string;
 }

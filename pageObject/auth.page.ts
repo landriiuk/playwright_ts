@@ -3,8 +3,9 @@ import { HomePage } from './home.page';
 import {
   IPersonalDetailsRegister,
   IAddressDetails,
+  IRegisterDetails,
   ILoginDetails,
-} from '../testData/interfaces/login.interfaces';
+} from './../testData/interfaces/authPage.interfaces';
 
 export class LoginPage extends HomePage {
   private readonly getLoginButton: Locator;
@@ -33,6 +34,9 @@ export class LoginPage extends HomePage {
   private readonly termsCheckbox: Locator;
 
   private readonly accountCreatedMessage: Locator;
+  private readonly loginNameInput: Locator;
+  private readonly passwordInput: Locator;
+  private readonly loginButton: Locator;
   constructor(page: Page) {
     super(page);
     this.getLoginButton = this.getByLinkNameCommon('Login or register');
@@ -57,6 +61,10 @@ export class LoginPage extends HomePage {
     this.confirmPassword = page.locator(`${this.formBase}confirm`);
     this.termsCheckbox = page.getByLabel('I have read and agree to the');
     this.accountCreatedMessage = page.locator('.maintext');
+    this.loginNameInput = page.locator('#loginFrm_loginname');
+    this.passwordInput = page.locator('#loginFrm_password');
+
+    this.loginButton = page.getByRole('button', { name: 'Login' });
   }
   async clickLoginOrRegister() {
     await this.getLoginButton.click();
@@ -90,7 +98,7 @@ export class LoginPage extends HomePage {
     await this.state.selectOption(details.state);
   }
 
-  async fillAccountDetails(details: ILoginDetails) {
+  async fillAccountDetails(details: IRegisterDetails) {
     await this.loginName.fill(details.loginName);
     await this.password.fill(details.password);
     await this.confirmPassword.fill(details.confirmPassword);
@@ -105,5 +113,14 @@ export class LoginPage extends HomePage {
     await expect(this.accountCreatedMessage).toHaveText(
       'Your Account Has Been Created!'
     );
+  }
+
+  async fillLoginDetails(details: ILoginDetails) {
+    await this.loginNameInput.fill(details.loginName);
+    await this.passwordInput.fill(details.password);
+  }
+
+  async clickLoginButton() {
+    await this.loginButton.click();
   }
 }
