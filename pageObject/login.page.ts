@@ -1,5 +1,10 @@
 import { Locator, Page, expect } from '@playwright/test';
 import { HomePage } from './home.page';
+import {
+  IPersonalDetailsRegister,
+  IAddressDetails,
+  ILoginDetails,
+} from '../testData/interfaces/login.interfaces';
 
 export class LoginPage extends HomePage {
   private readonly getLoginButton: Locator;
