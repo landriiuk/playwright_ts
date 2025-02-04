@@ -6,8 +6,7 @@ import {
 } from '../../testData/registerDetails';
 import { ILoginDetails } from '../../testData/interfaces/authPage.interfaces';
 test.describe('Authentication tests', async () => {
-  // XXX: This test is skipped because the registration form is not available on the AbanteCart site
-  test.skip('UI_TC_002 Verify that a user can register successfully with valid credentials', async ({
+  test('UI_TC_002 Verify that a user can register successfully with valid credentials', async ({
     homePage,
     loginPage,
   }) => {
@@ -47,7 +46,6 @@ test.describe('Authentication tests', async () => {
     await test.step('Navigate to login page', async () => {
       await loginPage.clickLoginOrRegister();
       await loginPage.verifyAccountLoginVisible();
-      await loginPage.clickContinueButton();
     });
 
     await test.step('Login with valid credentials', async () => {
